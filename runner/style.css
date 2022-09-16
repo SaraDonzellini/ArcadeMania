@@ -1,0 +1,36 @@
+:root {
+     --road-size: 60px;
+}
+
+#grid {
+    width: calc(var(--road-size) * 10);
+    height: 400px;
+
+    display: flex;
+    align-items: flex-end;
+    border-bottom: 3px solid #ffffff;
+}
+
+#grid > div {
+    width: var(--road-size);
+    height: var(--road-size);
+}
+
+.duck {
+    background-image: url(./images/duck_w.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transition: transform 0.3s;
+}
+
+.plant:not(.duck) {
+    background-image: url(./images/obstacle.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.duck-jump {
+    transform: translateY(-150%);
+}
